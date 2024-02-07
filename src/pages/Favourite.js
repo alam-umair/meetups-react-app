@@ -16,7 +16,7 @@ function Favourite() {
 
   return (
     <section>
-      <h1>My Favourites</h1>
+      <h1>My Favourites Meetups</h1>
       {content}
     </section>
   );
