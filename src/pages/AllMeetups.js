@@ -1,6 +1,49 @@
 import { useEffect, useState } from "react";
 import MeetupList from "../components/meetups/MeetupList";
 
+const myData = [
+  {
+    id: "1",
+    address: "abcd test",
+    description: "this is a test",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+    title: "test",
+  },
+  {
+    id: "2",
+    address: "abcd test",
+    description: "this is a test",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+    title: "test",
+  },
+  {
+    id: "3",
+    address: "abcd test",
+    description: "this is a test",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+    title: "test",
+  },
+  {
+    id: "4",
+    address: "abcd test",
+    description: "this is a test",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+    title: "test",
+  },
+  {
+    id: 5,
+    address: "abcd test",
+    description: "this is a test",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+    title: "test",
+  },
+];
+
 function AllMeetups() {
   const [isLoading, setIsLoading] = useState(true);
   const [isData, setIsData] = useState([]);
@@ -36,7 +79,11 @@ function AllMeetups() {
   return (
     <div>
       <h1>All Meetups</h1>
-      <MeetupList meetups={isData} />
+      {isData.length >= 2 ? (
+        <MeetupList meetups={isData} />
+      ) : (
+        <MeetupList meetups={myData} />
+      )}
     </div>
   );
 }
