@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path="/" element={<AllMeetups />} />
+            <Route path="/all-meetups" element={<AllMeetups />} />
             <Route path="/new-meetups" element={<NewMeetups />} />
             <Route path="/favourite" element={<Favourite />} />
           </Routes>

@@ -13,7 +13,7 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <Link to="/">All Meetups</Link>
+            <Link to="/all-meetups">All Meetups</Link>
           </li>
           <li>
             <Link to="/new-meetups">New Meetups</Link>
